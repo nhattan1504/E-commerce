@@ -1,0 +1,27 @@
+.category{
+    padding: 10px 10px;
+}
+.category .list-category {
+    padding: 0px 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.category .list-category > div{
+    margin-right: 20px;
+    width: 250px;
+    margin-top: 15px;
+}
+.category .list-category > div:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.category .list-category > div img{
+    width: 250px;
+    height: 150px;
+    border-radius: 8px;
+}
+.category .list-category > div p{
+    font-weight: 400;
+    font-size: 18px;
+}
