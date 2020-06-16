@@ -11,6 +11,10 @@ body{
     flex-basis: 5%;
     align-items: center;
     font-size: 20px;
+    color: white;
+}
+.containere >a{
+    color: white;
 }
 .containere .logo{
     padding-left: 5%;
