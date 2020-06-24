@@ -183,6 +183,16 @@
                 <div class="simpleCart_shelfItem">
                     <p><span>2.0000.000 vnđ</span> <i class="item_price" style="color:brown">1.500.000 vnđ</i></p>
                     <button type="submit" class="w3ls-cart" style="color:rgb(49, 20, 128) ;">Thêm vào giỏ hàng</button>
+                    <p><input name='cmd' type='hidden' value='_ext-enter' />
+                        <form action='https://www.paypal.com/us/cgi-bin/webscr' method='post'>
+                            <input name='cmd' type='hidden' value='_xclick' />
+                            <input name='business' type='hidden' value='nguyentrungtinh961@gmail.com' />
+                            <input name='item_name' type='hidden' value='Nguyen Trung Tinh' />
+                            <input name='currency_code' type='hidden' value='USD' />
+                            <input class="mount" name='amount' type='hidden' value='100' />
+                            <input alt='Make payments with PayPal - it&#39;s fast, free and secure!' name='submit' src='https://4.bp.blogspot.com/-0u7zCCJabEI/WIGl2spPwFI/AAAAAAAAEpM/ak_rm2S8eeca7NSE7UXzvFkZyaqYtO9HwCLcB/s1600/Paypal%2BButtons%2B2.png' type='image' />
+                        </form></p>
+                        
                     </form>
                 </div>
             </div>
