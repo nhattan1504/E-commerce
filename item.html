@@ -48,13 +48,13 @@
             <img src="./img/logo.jpg" style="width:60px; height: 60px;">
         </div>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <a class="navbar-brand" href="index.html">TRANG CHU</a>
+          <a class="navbar-brand" href="index.html">TRANG CHỦ</a>
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-              <a class="nav-link" href="listItem.html">KHOA HOC <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="listItem.html">KHÓA HỌC<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">DANG KI LAM GIA SU</a>
+              <a class="nav-link" href="#">ĐĂNG KÍ LÀM GIA SƯ</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
@@ -124,6 +124,38 @@
                         <p>Đến với khóa học của chúng tôi, cam kết có thể nói tiếng anh thành thạo. Được giao tiếp nói chuyện trực tiếp với người bản địa. Được các giáo viên có trình độ cao trực tiếp giảng dạy,không lo lắng về chất lượng khóa học.
                         </p>
                     </div>
+
+                    <div id="paypal-button-container"></div>
+                        <script src="https://www.paypal.com/sdk/js?client-id=AeSLf4LQYH2u6i22f_9oYXIl6rUXtmKxCFccdElHTGXv-UwG8SQD1hbnQ-zpp08RTHRUB5-gZK8sdlRI&currency=USD" data-sdk-integration-source="button-factory"></script>
+                        <script>
+                            
+                        </script>
+                        <script>
+                        paypal.Buttons({
+                            style: {
+                                shape: 'pill',
+                                color: 'blue',
+                                layout: 'vertical',
+                                label: 'paypal',
+                                
+                            },
+                            createOrder: function(data, actions) {
+                                return actions.order.create({
+                                    purchase_units: [{
+                                        amount: {
+                                            value: '100'
+                                        }
+                                    }]
+                                });
+                            },
+                            onApprove: function(data, actions) {
+                                return actions.order.capture().then(function(details) {
+                                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                                });
+                            }
+                        }).render('#paypal-button-container');
+                        </script>
+
                     <div class="color-quality">
 
                         <div class="color-quality">
@@ -312,9 +344,8 @@
     </div>
     <div class="contactWork">
         <div class="address">
-            <h3>CÔNG TY TNHH GIA SƯ ETEACHER</h3>
-            <p>Văn phòng đại diện: 15-08 Tòa nhà Vincom Center, 72 Lê Thánh Tôn, P.Bến Nghé, Q.1, TP.HCM</p>
-            <p> Văn phòng làm việc: 10B Nguyễn Thị Minh Khai, P. Dakao, Q.1, TP. HCM</p>
+            <h3>CÔNG TY TNHH GIA SƯ ETUTOR</h3>
+            <p>Văn phòng đại diện: Lý Thường Kiệt, P.14, Q.10, TP.HCM</p>
         </div>
         <div class="network">
             <h1>Network</h1>
