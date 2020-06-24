@@ -48,21 +48,21 @@
             <img src="./img/logo.jpg" style="width:60px; height: 60px;">
         </div>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <a class="navbar-brand" href="index.html">TRANG CHỦ</a>
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="listItem.html">KHÓA HỌC<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">ĐĂNG KÍ LÀM GIA SƯ</a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
+            <a class="navbar-brand" href="index.html">TRANG CHỦ</a>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="listItem.html">KHÓA HỌC<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">ĐĂNG KÍ LÀM GIA SƯ</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
         </div>
-      </nav>
+    </nav>
     <div class="single">
 
         <div class=" container">
@@ -125,36 +125,7 @@
                         </p>
                     </div>
 
-                    <div id="paypal-button-container"></div>
-                        <script src="https://www.paypal.com/sdk/js?client-id=AeSLf4LQYH2u6i22f_9oYXIl6rUXtmKxCFccdElHTGXv-UwG8SQD1hbnQ-zpp08RTHRUB5-gZK8sdlRI&currency=USD" data-sdk-integration-source="button-factory"></script>
-                        <script>
-                            
-                        </script>
-                        <script>
-                        paypal.Buttons({
-                            style: {
-                                shape: 'pill',
-                                color: 'blue',
-                                layout: 'vertical',
-                                label: 'paypal',
-                                
-                            },
-                            createOrder: function(data, actions) {
-                                return actions.order.create({
-                                    purchase_units: [{
-                                        amount: {
-                                            value: '100'
-                                        }
-                                    }]
-                                });
-                            },
-                            onApprove: function(data, actions) {
-                                return actions.order.capture().then(function(details) {
-                                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
-                                });
-                            }
-                        }).render('#paypal-button-container');
-                        </script>
+
 
                     <div class="color-quality">
 
@@ -216,15 +187,37 @@
                     <p><span>2.0000.000 vnđ</span> <i class="item_price" style="color:brown">1.500.000 vnđ</i></p>
                     <button type="submit" class="w3ls-cart" style="color:rgb(49, 20, 128) ;">Thêm vào giỏ hàng</button>
                     <p><input name='cmd' type='hidden' value='_ext-enter' />
-                        <form action='https://www.paypal.com/us/cgi-bin/webscr' method='post'>
-                            <input name='cmd' type='hidden' value='_xclick' />
-                            <input name='business' type='hidden' value='nguyentrungtinh961@gmail.com' />
-                            <input name='item_name' type='hidden' value='Nguyen Trung Tinh' />
-                            <input name='currency_code' type='hidden' value='USD' />
-                            <input class="mount" name='amount' type='hidden' value='100' />
-                            <input alt='Make payments with PayPal - it&#39;s fast, free and secure!' name='submit' src='https://4.bp.blogspot.com/-0u7zCCJabEI/WIGl2spPwFI/AAAAAAAAEpM/ak_rm2S8eeca7NSE7UXzvFkZyaqYtO9HwCLcB/s1600/Paypal%2BButtons%2B2.png' type='image' />
-                        </form></p>
-                        
+                        <div id="paypal-button-container"></div>
+                        <script src="https://www.paypal.com/sdk/js?client-id=AeSLf4LQYH2u6i22f_9oYXIl6rUXtmKxCFccdElHTGXv-UwG8SQD1hbnQ-zpp08RTHRUB5-gZK8sdlRI&currency=USD" data-sdk-integration-source="button-factory"></script>
+                        <script>
+                        </script>
+                        <script>
+                            paypal.Buttons({
+                                style: {
+                                    shape: 'pill',
+                                    color: 'blue',
+                                    layout: 'vertical',
+                                    label: 'paypal',
+
+                                },
+                                createOrder: function(data, actions) {
+                                    return actions.order.create({
+                                        purchase_units: [{
+                                            amount: {
+                                                value: '100'
+                                            }
+                                        }]
+                                    });
+                                },
+                                onApprove: function(data, actions) {
+                                    return actions.order.capture().then(function(details) {
+                                        alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                                    });
+                                }
+                            }).render('#paypal-button-container');
+                        </script>
+                    </p>
+
                     </form>
                 </div>
             </div>
@@ -349,17 +342,8 @@
         </div>
         <div class="network">
             <h1>Network</h1>
-            <ul>
-                <li>
-                    <i class="fab fa-instagram fa-3x"></i>
-                </li>
-                <li>
-                    <i class="fab fa-facebook-f fa-3x"></i>
-                </li>
-                <li>
-                    <i class="fab fa-youtube fa-3x"></i>
-                </li>
-            </ul>
+            <p><a href="https://www.facebook.com/BestHP " target="_blank "><i class="fab fa-facebook mr-2 fa-3x "></i>
+                    </a><a href="https://www.instagram.com/phamminhhien1999py/" target="_blank "><i class="fab fa-instagram fa-3x "></i></a></p>
         </div>
     </div>
 </body>
